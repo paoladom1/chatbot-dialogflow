@@ -1,21 +1,27 @@
 <h1>Angular Bot</h1>
 
 
+<div class="mycomp" data-simplebar>
 
-<ng-container *ngFor="let message of messages | async">
+  <ng-container *ngFor="let message of messages | async">
 
-  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                    'to':   message.sentBy === 'user' }">
-    {{ message.content }}
-  </div>
+    <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+      {{ message.content }}
+    </div>
+  
+  </ng-container>
 
-</ng-container>
+</div>
+
+<div class="textField">
+
+  <label for="nameField">Your Message</label>
 
 
-<label for="nameField">Your Message</label>
+  <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br>
+  
+  <button (click)="sendMessage()">Send</button>
 
-
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br>
-
-<button (click)="sendMessage()">Send</button>
+</div>
 

@@ -5,19 +5,31 @@
     position: relative;
     font-weight: bold;
 }
+//Mensaje de usuario
 .message.to {
     background-color: #2095FE;
     color: #fff;
     margin-left: 100px;
     text-align: right;
+    width: fit-content;
+    margin-left: auto;
 }
+//Mensaje de bot
 .message.from {
     background-color: #E5E4E9;
     color: #363636;
     margin-right: 100px;
+    width: fit-content;
+    margin-right: auto;
 
 }
 .message.to + .message.to,
 .message.from + .message.from {
 margin-top: -10px;
+}
+
+//Contenedor de mensajes
+.mycomp{
+    height: 38em;
+    padding: 1.4em;
 }
