@@ -18,8 +18,8 @@
     <ng-container *ngFor="let message of messages | async">
       <div class="row m-0 p-0">
         <div class="col-12">
-          <img class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                      'to':   message.sentBy === 'user' }">
+          <div class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }"></div>
         </div>
         <div class="col-12">
           <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',

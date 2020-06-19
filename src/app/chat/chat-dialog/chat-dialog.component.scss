@@ -7,10 +7,6 @@
   border: gray 0px none !important;
 }
 
-img{
-  border: gray 0px none !important;
-}
-
 .face.to{
   background-image: url("~assets/user.png");
   background-size: contain;
@@ -28,6 +24,12 @@ img{
   font-weight: bold;
   font-size: 14px;
 }
+
+.texto{
+  justify-content: center;
+  align-self: center;
+}
+
 //Mensaje de usuario
 .message.to {
   background-color: #2095FE;
