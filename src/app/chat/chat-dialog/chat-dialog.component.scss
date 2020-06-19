@@ -1,35 +1,108 @@
+.face.from{
+  background: url("~assets/guti.png") no-repeat;
+  background-size: contain;
+  border: none;
+  height: 2em;
+  width: 2em;
+}
+
+.face.to{
+  background: url("~assets/user.png") no-repeat;
+  background-size: contain;
+  border: none;
+  height: 2em;
+  width: 2em;
+  float: right;
+}
+
 .message {
-    border-radius: 50px;
-    margin: 0 15px 10px;
-    padding: 15px 20px;
-    position: relative;
-    font-weight: bold;
+  border-radius: 50px;
+  margin: 0 15px 10px;
+  padding: 15px 20px;
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
 }
 //Mensaje de usuario
 .message.to {
-    background-color: #2095FE;
-    color: #fff;
-    margin-left: 100px;
-    text-align: right;
-    width: fit-content;
-    margin-left: auto;
+  background-color: #2095FE;
+  color: #fff;
+  margin-left: 100px;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
 }
 //Mensaje de bot
 .message.from {
-    background-color: #E5E4E9;
-    color: #363636;
-    margin-right: 100px;
-    width: fit-content;
-    margin-right: auto;
+  background-color: #E5E4E9;
+  color: #363636;
+  margin-right: 100px;
+  width: fit-content;
+  margin-right: auto;
 
 }
 .message.to + .message.to,
 .message.from + .message.from {
-margin-top: -10px;
+  margin-top: -10px;
 }
 
 //Contenedor de mensajes
 .mycomp{
-    height: 30em;
-    padding: 1.4em;
+  height: 20em;
+  padding: 1em;
 }
+
+.container{
+  width: auto;
+  background-color: rgb(36,93,148);
+  border: 0px solid gray;
+  border-radius: 5px 5px 0px 0px;
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.texto{
+  margin: 0;
+  color: white;
+}
+
+.btn{
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.fas{
+  width: auto;
+}
+
+.btnsend{
+  background-color: rgb(226,138,50);
+  border: none;
+  border-radius: 0;
+}
+
+.cont{
+  background-color: rgb(36,93,148);
+  margin: 0;
+  width: auto;
+}
+
+.row{
+  padding: 0;
+  margin: 0;
+}
+
+::placeholder{
+  color: white;
+}
+
+.texto{
+  color: white;
+}
+
+*{
+  width: 25em;
+}
+

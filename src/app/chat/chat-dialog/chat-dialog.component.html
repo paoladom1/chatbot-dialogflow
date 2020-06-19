@@ -1,27 +1,55 @@
-<h1>Angular Bot</h1>
+<ng-container [ngTemplateOutlet]="getTemplate">
 
+</ng-container>
 
-<div class="mycomp" data-simplebar>
-
-  <ng-container *ngFor="let message of messages | async">
-
-    <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                      'to':   message.sentBy === 'user' }">
-      {{ message.content }}
+<ng-template #openTemplate>
+  <div class="container p-0">
+    <div class="row justify-content-between p-0">
+      <div class="col-4 texto">Bot Biblioteca</div>
+      <div class="col-1 m-0 p-0">
+        <button class="btn" (click)="changeTemplate()"><i class="fas fa-ellipsis-h m-0 p-0"></i></button>
+      </div>
     </div>
-  
-  </ng-container>
-
-</div>
-
-<div class="textField">
-
-  <label for="nameField">Your Message</label>
+  </div>
 
 
-  <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br>
-  
-  <button (click)="sendMessage()">Send</button>
+  <div class="mycomp p-0" data-simplebar>
 
-</div>
+    <ng-container *ngFor="let message of messages | async">
+      <div class="row m-0 p-0">
+        <div class="col-12">
+          <img class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+        </div>
+        <div class="col-12">
+          <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+            {{ message.content }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+
+  <div class="cont m-0 p-0">
+    <div class="row m-0 p-0">
+      <div class="col-10 p-0">
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"  placeholder="Mensaje" class="texto border-0">
+      </div>
+      <div class="col-2 row m-0"><button class="col-12 m-0 btnsend" (click)="sendMessage()">Send</button></div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #closeTemplate>
+  <div class="container p-0">
+    <div class="row justify-content-between p-0">
+      <div class="col-4 texto">Bot Biblioteca</div>
+      <div class="col-1 m-0 p-0">
+        <button class="btn" (click)="changeTemplate()"><i class="fas fa-ellipsis-h m-0 p-0"></i></button>
+      </div>
+    </div>
+  </div>
+</ng-template>
 

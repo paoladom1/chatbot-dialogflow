@@ -9,11 +9,13 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/7f66318f6f.js" crossorigin="anonymous"></script>
+
 
   <!-- CSS Reset -->
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-  
+
   <!-- Milligram CSS minified -->
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
@@ -21,13 +23,31 @@
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
 </head>
 <style>
-
+  body{
+    background: #363636;
+  }
+  .box{
+    background: white;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    right: 5rem;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    border-radius: 5px 5px 0px 0px;
+  }
 
 </style>
 <body>
+<div class="box">
   <app-root></app-root>
+</div>
 
-  <!-- SimpleBar JS -->
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<!-- SimpleBar JS -->
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 </body>
 </html>
