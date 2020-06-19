@@ -35,9 +35,9 @@ export class ChatDialogComponent implements OnInit {
 
   get getTemplate() {
     if (this.estado) {
-      return this.openTemplate;
-    } else {
       return this.closeTemplate;
+    } else {
+      return this.openTemplate;
     }
 
   }
