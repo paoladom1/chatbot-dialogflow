@@ -1,15 +1,20 @@
 .face.from{
-  background: url("~assets/guti.png") no-repeat;
+  background-image: url("~assets/guti.png");
   background-size: contain;
-  border: none;
-  height: 2em;
-  width: 2em;
+  background-repeat: no-repeat;
+  height: 2.3em;
+  width: 2.3em;
+  border: gray 0px none !important;
+}
+
+img{
+  border: gray 0px none !important;
 }
 
 .face.to{
-  background: url("~assets/user.png") no-repeat;
+  background-image: url("~assets/user.png");
   background-size: contain;
-  border: none;
+  background-repeat: no-repeat;
   height: 2em;
   width: 2em;
   float: right;
@@ -49,7 +54,7 @@
 //Contenedor de mensajes
 .mycomp{
   height: 20em;
-  padding: 1em;
+  padding-top: 1em;
 }
 
 .container{
@@ -96,6 +101,7 @@
 
 ::placeholder{
   color: white;
+  opacity: 0.5;
 }
 
 .texto{
