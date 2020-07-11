@@ -33,8 +33,6 @@ export class ChatService {
                });
   }
 
-
-
   // Adds message to source
   update(msg: Message) {
     this.conversation.next([msg]);
