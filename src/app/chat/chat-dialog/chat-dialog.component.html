@@ -15,6 +15,20 @@
 
   <div class="mycomp" data-simplebar>
 
+    <!-- Introduccion -->
+    <div _ngcontent-c1 class="row m-0 p-0">
+      <div _ngcontent-c1 class="col-12">
+        <div _ngcontent-c1 class="face from"></div>
+      </div>
+
+      <div _ngcontent-c1 class="col-12">
+        <div _ngcontent-c1 class="message from">
+          Bienvenido al chat de la 
+        </div>
+      </div>
+    </div>
+    <!-- Introduccion -->
+
     <ng-container *ngFor="let message of messages | async">
       <div class="row m-0 p-0">
         <div class="col-12">
@@ -35,7 +49,8 @@
   <div class="cont m-0 p-0">
     <div class="row m-0 p-0">
       <div class="col-10 p-0">
-        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"  placeholder="Mensaje" class="texto border-0">
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="Mensaje"
+          class="texto border-0">
       </div>
       <div class="col-2 row m-0"><button class="col-12 m-0 btnsend" (click)="sendMessage()">Send</button></div>
     </div>
@@ -52,4 +67,3 @@
     </div>
   </div>
 </ng-template>
-
