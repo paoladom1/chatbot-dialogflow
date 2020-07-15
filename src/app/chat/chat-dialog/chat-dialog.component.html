@@ -15,7 +15,7 @@
   </div>
 
 
-  <div class="mycomp" id="conversation">
+  <div class="mycomp conversation" id="conversation" style="overflow: scroll; height: xyz;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
 
     <ng-container *ngFor="let message of messages | async">
       <div class="row m-0 p-0">
@@ -55,3 +55,4 @@
     </div>
   </div>
 </ng-template>
+

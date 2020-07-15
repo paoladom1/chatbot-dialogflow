@@ -56,9 +56,10 @@
 
 //Contenedor de mensajes
 .mycomp{
-  height: 20em;
+  display: block;
+  min-height: 20em;
+  max-height: 20em;
   padding-top: 1em;
-  overflow: hidden;
   overflow-y: scroll;
 }
 

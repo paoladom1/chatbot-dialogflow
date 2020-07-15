@@ -6,13 +6,3 @@ body{
 body, html{
     height: 80vh;
 }
-
-.simplebar-scrollbar {
-    position: absolute;
-    content: '';
-    background: gray;
-    border-radius: 7px;
-    left: 2px;
-    right: 2px;
-    transition: opacity 0.2s linear;
-  }
