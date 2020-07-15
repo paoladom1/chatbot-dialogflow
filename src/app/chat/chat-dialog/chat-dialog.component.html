@@ -5,8 +5,8 @@
 <ng-template #openTemplate>
   <div class="container p-0">
     <div class="row justify-content-between p-0">
-      <div class="col-4 texto">Bot Biblioteca</div>
-      <div class="col-3 row justify-content-end align-self-end m-0 p-0">
+      <div class="col-md-4 texto">Bot Biblioteca</div>
+      <div class="col-md-3 row justify-content-end align-self-end m-0 p-0">
         <button onclick="window.open('https://forms.gle/PvPbZchWiFDvcogMA','_blank')" class="col-md-4 btn"><i class="fas fa-exclamation m-0 p-0"></i></button>
         <button class="col-md-4 btn" (click)="changeTemplate()"><i class="fas fa-compress-alt m-0 p-0"></i></button>
         <button class="col-md-4 btn" (click)="nuevoTemplate()"><i class="fas fa-times m-0 p-0"></i></button>
@@ -19,11 +19,11 @@
 
     <ng-container *ngFor="let message of messages | async">
       <div class="row m-0 p-0">
-        <div class="col-12">
+        <div class="col-md-12">
           <div class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to':   message.sentBy === 'user' }"></div>
         </div>
-        <div class="col-12">
+        <div class="col-md-12">
           <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to':   message.sentBy === 'user' }">
             {{ message.content }}
@@ -36,11 +36,11 @@
 
   <div class="cont m-0 p-0">
     <div class="row m-0 p-0">
-      <div class="col-10 p-0">
+      <div class="col-md-10 p-0">
         <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="Mensaje"
           class="texto border-0">
       </div>
-      <div class="col-2 row m-0"><button class="col-12 m-0 btnsend" (click)="sendMessage()">Send</button></div>
+      <div class="col-md-2 row m-0"><button class="col-md-12 m-0 btnsend" (click)="sendMessage()">Send</button></div>
     </div>
   </div>
 </ng-template>
@@ -48,8 +48,8 @@
 <ng-template #closeTemplate>
   <div class="container p-0">
     <div class="row justify-content-between p-0">
-      <div class="col-4 texto">Bot Biblioteca</div>
-      <div class="col-2 row justify-content-end m-0 p-0">
+      <div class="col-md-4 texto">Bot Biblioteca</div>
+      <div class="col-md-2 row justify-content-end m-0 p-0">
         <button class="col-md-6 btn" (click)="changeTemplate()"><i class="fas fa-expand-alt m-0 p-0"></i></button>
       </div>
     </div>
