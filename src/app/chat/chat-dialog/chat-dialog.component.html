@@ -6,15 +6,16 @@
   <div class="container p-0">
     <div class="row justify-content-between p-0">
       <div class="col-4 texto">Bot Biblioteca</div>
-      <div class="col-2 row justify-content-end align-self-end m-0 p-0">
-        <button class="col-md-6 btn" (click)="changeTemplate()"><i class="fas fa-compress-alt m-0 p-0"></i></button>
-        <button class="col-md-6 btn" (click)="nuevoTemplate()"><i class="fas fa-times m-0 p-0"></i></button>
+      <div class="col-3 row justify-content-end align-self-end m-0 p-0">
+        <button onclick="window.open('https://forms.gle/PvPbZchWiFDvcogMA','_blank')" class="col-md-4 btn"><i class="fas fa-exclamation m-0 p-0"></i></button>
+        <button class="col-md-4 btn" (click)="changeTemplate()"><i class="fas fa-compress-alt m-0 p-0"></i></button>
+        <button class="col-md-4 btn" (click)="nuevoTemplate()"><i class="fas fa-times m-0 p-0"></i></button>
       </div>
     </div>
   </div>
 
 
-  <div class="mycomp" data-simplebar>
+  <div class="mycomp" id="conversation">
 
     <ng-container *ngFor="let message of messages | async">
       <div class="row m-0 p-0">

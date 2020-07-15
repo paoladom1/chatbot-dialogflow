@@ -58,6 +58,8 @@
 .mycomp{
   height: 20em;
   padding-top: 1em;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .container{
@@ -118,4 +120,3 @@
 *{
   width: 25em;
 }
-
