@@ -38,6 +38,7 @@ export class ChatDialogComponent implements OnInit {
   // Mensaje de bienvenida
   bienvenida() {
     this.chat.convers('hola');
+    console.log(this.messages);
   }
 
   get getTemplate() {
