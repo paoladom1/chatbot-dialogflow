@@ -1,7 +1,8 @@
-import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import { ChatService, Message } from '../chat.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/scan';
+import {Subscription} from 'rxjs/Subscription';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class ChatDialogComponent implements OnInit {
 
   messages: Observable<Message[]>;
   formValue: string;
+  cont = 1 ;
 
   @ViewChild('closeTemplate') closeTemplate: TemplateRef<any>;
   @ViewChild('openTemplate') openTemplate: TemplateRef<any>;
@@ -33,16 +35,31 @@ export class ChatDialogComponent implements OnInit {
     this.formValue = '';
   }
 
+  // Mensaje de bienvenida
+  bienvenida() {
+    this.chat.convers('hola');
+  }
+
   get getTemplate() {
     if (this.estado) {
       return this.closeTemplate;
     } else {
       return this.openTemplate;
     }
-
   }
 
+  // Minimizar
   changeTemplate() {
+    if (this.cont === 1) {
+      this.bienvenida();
+      this.cont++;
+    }
+    this.estado = !this.estado;
+  }
+
+  // Cerrar
+  nuevoTemplate() {
+    this.cont = 1;
     this.estado = !this.estado;
   }
 

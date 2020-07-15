@@ -42,10 +42,31 @@ export class ChatService {
                );
   }
 
+  // Sends and receives messages via DialogFlow
+  convers(msg: string) {
+    const userMessage = new Message(msg, 'user');
+    // this.update(userMessage);
+
+    return this.client.textRequest(msg)
+      .then(res => {
+          const objetoJSON = JSON.parse(JSON.stringify(res.result.fulfillment));
+          const array = objetoJSON['messages'];
+          const posicion1 = array[0];
+          const msg1 = posicion1['speech'];
+          const posicion2 = array[1];
+          const msg2 = posicion2['speech'];
+          const speech = objetoJSON['messages'];
+          const botMessage = new Message(msg1.toString(), 'bot');
+          this.update(botMessage);
+          const botMsg = new Message(msg2.toString(), 'bot');
+          this.update(botMsg);
+        }
+      );
+  }
+
   // Adds message to source
   update(msg: Message) {
     this.conversation.next([msg]);
   }
-
 
 }

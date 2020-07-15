@@ -6,28 +6,15 @@
   <div class="container p-0">
     <div class="row justify-content-between p-0">
       <div class="col-4 texto">Bot Biblioteca</div>
-      <div class="col-1 m-0 p-0">
-        <button class="btn" (click)="changeTemplate()"><i class="fas fa-compress-alt m-0 p-0"></i></button>
+      <div class="col-2 row justify-content-end align-self-end m-0 p-0">
+        <button class="col-md-6 btn" (click)="changeTemplate()"><i class="fas fa-compress-alt m-0 p-0"></i></button>
+        <button class="col-md-6 btn" (click)="nuevoTemplate()"><i class="fas fa-times m-0 p-0"></i></button>
       </div>
     </div>
   </div>
 
 
   <div class="mycomp" data-simplebar>
-
-    <!-- Introduccion -->
-    <div _ngcontent-c1 class="row m-0 p-0">
-      <div _ngcontent-c1 class="col-12">
-        <div _ngcontent-c1 class="face from"></div>
-      </div>
-
-      <div _ngcontent-c1 class="col-12">
-        <div _ngcontent-c1 class="message from">
-          Bienvenido, este es el chat de la biblioteca y yo soy un bot, no soy una persona real, pero estoy aquí para ayudarte.
-        </div>
-      </div>
-    </div>
-    <!-- Introduccion -->
 
     <ng-container *ngFor="let message of messages | async">
       <div class="row m-0 p-0">
@@ -61,8 +48,8 @@
   <div class="container p-0">
     <div class="row justify-content-between p-0">
       <div class="col-4 texto">Bot Biblioteca</div>
-      <div class="col-1 m-0 p-0">
-        <button class="btn" (click)="changeTemplate()"><i class="fas fa-expand-alt m-0 p-0"></i></button>
+      <div class="col-2 row justify-content-end m-0 p-0">
+        <button class="col-md-6 btn" (click)="changeTemplate()"><i class="fas fa-expand-alt m-0 p-0"></i></button>
       </div>
     </div>
   </div>
