@@ -21,11 +21,11 @@
       <div class="row m-0 p-0">
         <div class="col-md-12">
           <div class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                      'to':   message.sentBy === 'user' }"></div>
+                                      'to':   message.sentBy === 'user' }" *ngIf="message.sentBy != null"></div>
         </div>
         <div class="col-md-12">
           <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                      'to':   message.sentBy === 'user' }">
+                                      'to':   message.sentBy === 'user' }" *ngIf="message.content != null">
             {{ message.content }}
           </div>
         </div>

@@ -73,4 +73,10 @@ export class ChatService {
     this.conversation.next([msg]);
   }
 
+  clear(msg: string) {
+    const botMsg = new Message(null, null);
+
+    return this.update(botMsg);
+  }
+
 }
