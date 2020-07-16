@@ -2,7 +2,6 @@ import {Component, OnDestroy, OnInit, TemplateRef, ViewChild} from '@angular/cor
 import { ChatService, Message } from '../chat.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/scan';
-import 'rxjs/add/observable/empty';
 import {Subscription} from 'rxjs/Subscription';
 
 
@@ -27,6 +26,7 @@ export class ChatDialogComponent implements OnInit {
   }
   ngOnInit() {
     // appends to array after each new message is added to feedSource
+
     this.messages = this.chat.conversation.asObservable()
       .scan((acc, val) => acc.concat(val) );
   }
@@ -39,7 +39,6 @@ export class ChatDialogComponent implements OnInit {
   // Mensaje de bienvenida
   bienvenida() {
     this.chat.convers('hola');
-    console.log(this.messages);
   }
 
   get getTemplate() {
@@ -54,10 +53,7 @@ export class ChatDialogComponent implements OnInit {
   changeTemplate() {
     if (this.cont === 1) {
       this.bienvenida();
-      this.estado = !this.estado;
       this.cont++;
-    } else {
-      this.estado = !this.estado;
     }
   }
 
@@ -67,5 +63,4 @@ export class ChatDialogComponent implements OnInit {
     this.estado = !this.estado;
     this.chat.clear('');
   }
-
 }

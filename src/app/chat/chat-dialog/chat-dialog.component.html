@@ -6,18 +6,17 @@
   <div class="container p-0">
     <div class="row justify-content-between p-0">
       <div class="col-md-4 texto">Bot Biblioteca</div>
-      <div class="col-md-3 row justify-content-end align-self-end m-0 p-0">
-        <button onclick="window.open('https://forms.gle/PvPbZchWiFDvcogMA','_blank')" class="col-md-4 btn"><i class="fas fa-exclamation m-0 p-0"></i></button>
-        <button class="col-md-4 btn" (click)="changeTemplate()"><i class="fas fa-compress-alt m-0 p-0"></i></button>
-        <button class="col-md-4 btn" (click)="nuevoTemplate()"><i class="fas fa-times m-0 p-0"></i></button>
+      <div class="col-md-2 row justify-content-end m-0 p-0">
+        <button id="btnInff" onclick="window.open('https://forms.gle/PvPbZchWiFDvcogMA','_blank')" style="display:none;" class="col-md-4 btn"><i class="fas fa-exclamation m-0 p-0"></i></button>
+        <button id="btnMM" class="col-md-4 btn" onClick="mostrar2()" (click)="changeTemplate()"><i class="fas fa-expand-alt m-0 p-0"></i></button>
+        <button id="btnClosee" class="col-md-4 btn" onClick="mostrar2()" (click)="nuevoTemplate()" style="display:none;"><i class="fas fa-times m-0 p-0"></i></button>
       </div>
     </div>
   </div>
 
+  <div class="mycomp conversation" id="cambioo" style="display:none;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
 
-  <div class="mycomp conversation cambio" id="conversation" #scrollMe [scrollTop]="scrollMe.scrollHeight">
-
-    <ng-container *ngFor="let message of messages | async">
+    <ng-container *ngFor="let message of messages | async" style="display:inherit;">
       <div class="row m-0 p-0">
         <div class="col-md-12">
           <div class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
@@ -34,24 +33,54 @@
 
   </div>
 
-  <div class="cont m-0 p-0">
+  <div class="cont m-0 p-0" id="cambio22" style="display:none;">
     <div class="row m-0 p-0">
       <div class="col-md-10 p-0">
-        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="Mensaje"
-          class="texto border-0">
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="Mensaje" class="texto border-0">
       </div>
       <div class="col-md-2 row m-0"><button class="col-md-12 m-0 btnsend" (click)="sendMessage()">Enviar</button></div>
     </div>
   </div>
 </ng-template>
 
+
 <ng-template #closeTemplate>
   <div class="container p-0">
     <div class="row justify-content-between p-0">
       <div class="col-md-4 texto">Bot Biblioteca</div>
       <div class="col-md-2 row justify-content-end m-0 p-0">
-        <button class="col-md-6 btn" (click)="changeTemplate()"><i class="fas fa-expand-alt m-0 p-0"></i></button>
+        <button id="btnInf" onclick="window.open('https://forms.gle/PvPbZchWiFDvcogMA','_blank')" style="display:none;" class="col-md-4 btn"><i class="fas fa-exclamation m-0 p-0"></i></button>
+        <button id="btnM" class="col-md-4 btn" onClick="mostrar()" (click)="changeTemplate()"><i class="fas fa-expand-alt m-0 p-0"></i></button>
+        <button id="btnClose" class="col-md-4 btn" onClick="mostrar()" (click)="nuevoTemplate()" style="display:none;"><i class="fas fa-times m-0 p-0"></i></button>
       </div>
+    </div>
+  </div>
+
+  <div class="mycomp conversation" id="cambio" style="display:none;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+    <ng-container *ngFor="let message of messages | async" style="display:inherit;">
+      <div class="row m-0 p-0">
+        <div class="col-md-12">
+          <div class="face" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }" *ngIf="message.sentBy != null"></div>
+        </div>
+        <div class="col-md-12">
+          <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }" *ngIf="message.content != null">
+            {{ message.content }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+
+  <div class="cont m-0 p-0" id="cambio2" style="display:none;">
+    <div class="row m-0 p-0">
+      <div class="col-md-10 p-0">
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="Mensaje" class="texto border-0">
+      </div>
+      <div class="col-md-2 row m-0"><button class="col-md-12 m-0 btnsend" (click)="sendMessage()">Enviar</button></div>
     </div>
   </div>
 </ng-template>

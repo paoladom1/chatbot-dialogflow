@@ -59,3 +59,48 @@
 </body>
 </html>
 
+<script type="text/javascript">
+  var estado = false;
+
+  function mostrar() {
+    if (estado == false){
+      document.getElementById("cambio").style.display = "block"
+      document.getElementById("cambio2").style.display = "block"
+      document.getElementById("btnInf").style.display = "block"
+      document.getElementById("btnClose").style.display = "block"
+      document.getElementById("btnM").innerHTML = "<i class=\"fas fa-compress-alt\"></i>"
+      document.getElementById("btnM").style.fontSize = "1em";
+      estado = true;
+    } else {
+      document.getElementById("cambio").style.display = "none"
+      document.getElementById("cambio2").style.display= "none"
+      document.getElementById("btnInf").style.display = "none"
+      document.getElementById("btnClose").style.display = "none"
+      document.getElementById("btnM").innerHTML = "<i class=\"fas fa-expand-alt m-0 p-0\">"
+      document.getElementById("btnM").style.fontSize = "1em";
+      estado = false;
+    }
+  }
+
+  function mostrar2() {
+    if (estado == false){
+      document.getElementById("cambioo").style.display = "block"
+      document.getElementById("cambio22").style.display = "block"
+      document.getElementById("btnInff").style.display = "block"
+      document.getElementById("btnClosee").style.display = "block"
+      document.getElementById("btnMM").innerHTML = "<i class=\"fas fa-compress-alt\"></i>"
+      document.getElementById("btnMM").style.fontSize = "1em";
+      estado = true;
+    } else {
+      document.getElementById("cambioo").style.display = "none"
+      document.getElementById("cambio22").style.display= "none"
+      document.getElementById("btnInff").style.display = "none"
+      document.getElementById("btnClosee").style.display = "none"
+      document.getElementById("btnMM").innerHTML = "<i class=\"fas fa-expand-alt m-0 p-0\">"
+      document.getElementById("btnMM").style.fontSize = "1em";
+      estado = false;
+    }
+  }
+
+</script>
+
