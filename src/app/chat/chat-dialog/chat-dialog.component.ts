@@ -60,6 +60,7 @@ export class ChatDialogComponent implements OnInit {
   // Cerrar
   nuevoTemplate() {
     this.cont = 1;
+    this.chat.convers('end');
     this.estado = !this.estado;
     this.chat.clear('');
   }
