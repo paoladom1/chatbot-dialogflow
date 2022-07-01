@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Chatbot</title>
@@ -8,10 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/7f66318f6f.js" crossorigin="anonymous"></script>
-
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <!-- CSS Reset -->
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
 
@@ -19,20 +22,20 @@
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
   <!-- SimpleBar -->
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 </head>
 <style>
-  body{
+  body {
     background: #363636;
   }
 
-  body{
+  body {
     background: url("/assets/biblio.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  .box{
+  .box {
     background: white;
     margin: 0;
     padding: 0;
@@ -45,25 +48,26 @@
     flex-wrap: wrap;
     align-content: flex-end;
     border-radius: 5px 5px 0px 0px;
-    box-shadow:4px 4px 4px 4px grey;
+    box-shadow: 4px 4px 4px 4px grey;
   }
-
 </style>
-<body>
-<div class="box">
-  <app-root></app-root>
-</div>
 
-<!-- SimpleBar JS -->
-<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<body>
+  <div class="box">
+    <app-root></app-root>
+  </div>
+
+  <!-- SimpleBar JS -->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 </body>
+
 </html>
 
 <script type="text/javascript">
   var estado = false;
 
   function mostrar() {
-    if (estado == false){
+    if (estado == false) {
       document.getElementById("cambio").style.display = "block"
       document.getElementById("cambio2").style.display = "block"
       document.getElementById("btnInf").style.display = "block"
@@ -73,7 +77,7 @@
       estado = true;
     } else {
       document.getElementById("cambio").style.display = "none"
-      document.getElementById("cambio2").style.display= "none"
+      document.getElementById("cambio2").style.display = "none"
       document.getElementById("btnInf").style.display = "none"
       document.getElementById("btnClose").style.display = "none"
       document.getElementById("btnM").innerHTML = "<i class=\"fas fa-expand-alt m-0 p-0\">"
@@ -83,7 +87,7 @@
   }
 
   function mostrar2() {
-    if (estado == false){
+    if (estado == false) {
       document.getElementById("cambioo").style.display = "block"
       document.getElementById("cambio22").style.display = "block"
       document.getElementById("btnInff").style.display = "block"
@@ -93,7 +97,7 @@
       estado = true;
     } else {
       document.getElementById("cambioo").style.display = "none"
-      document.getElementById("cambio22").style.display= "none"
+      document.getElementById("cambio22").style.display = "none"
       document.getElementById("btnInff").style.display = "none"
       document.getElementById("btnClosee").style.display = "none"
       document.getElementById("btnMM").innerHTML = "<i class=\"fas fa-expand-alt m-0 p-0\">"
@@ -103,4 +107,3 @@
   }
 
 </script>
-
