@@ -1,8 +1,8 @@
 # Documentación
 
-<a href="https://bit.ly/2DPEBau" target="_blank">Manual para biblioteca</a> 
+<a href="https://github.com/paoladom1/chatbot-dialogflow/wiki/Manual-de-uso-sobre-DialogFlow-Messenger,-para-chat-Bot-de-Biblioteca" target="_blank">Manual para biblioteca</a> 
 
-<a href="https://bit.ly/3fCNEJE" target="_blank">Respuestas del bot</a> 
+<a href="https://github.com/paoladom1/chatbot-dialogflow/wiki/Manual-de-respuestas-del-Bot" target="_blank">Respuestas del bot</a> 
 
 # Herramientas necesarias para ejecutar este proyecto 
 
